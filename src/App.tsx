@@ -4,8 +4,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const tempArray: number[] = [];
-  const [count, setCount] = useState<number>(100);
+  const [count] = useState<number>(100);
 
   return (
     <div>

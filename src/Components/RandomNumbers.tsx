@@ -2,15 +2,13 @@ import { CSSProperties, useEffect, useState } from 'react';
 
 function RandomNumbers() {
   const [isFade, setIsFade] = useState<boolean>(false);
-  if (isFade) {
-
-  }
+  
   const randomNumber = Math.floor(Math.random() * 1000) + 1;
 
   const [num, setNum] = useState<number>(randomNumber);
 
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  const fontSize = Math.floor(Math.random() * 100) + 30;
+  const fontSize = Math.floor(Math.random() * 100) + 20;
   const x = Math.floor(Math.random() * 1400) + 1;
   const y = Math.floor(Math.random() * 1080) + 1;
 
@@ -28,11 +26,10 @@ function RandomNumbers() {
   }, [isFade]);
 
   const fadeOut = async () => {
-    const displayTime = Math.floor(Math.random() * 10000) + 4000;
+    const displayTime = Math.floor(Math.random() * 10000) + 3000;
 
     await new Promise(function () {
       setTimeout(function () {
-        const randomNumber = Math.floor(Math.random() * 1000) + 1;
         setCssStyle();
         setIsFade(!isFade);
       }, displayTime);

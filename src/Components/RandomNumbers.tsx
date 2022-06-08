@@ -2,7 +2,7 @@ import { CSSProperties, useEffect, useState } from 'react';
 
 function RandomNumbers() {
   const [isFade, setIsFade] = useState<boolean>(false);
-  
+  const [initial,setInitial] = useState<boolean>(true);
   const randomNumber = Math.floor(Math.random() * 1000) + 1;
 
   const [num, setNum] = useState<number>(randomNumber);
@@ -26,7 +26,9 @@ function RandomNumbers() {
   }, [isFade]);
 
   const fadeOut = async () => {
-    const displayTime = Math.floor(Math.random() * 10000) + 3000;
+    let displayTime:number;
+    initial ? displayTime = 1: displayTime = Math.floor(Math.random() * 10000) + 3000;
+    setInitial(false);
 
     await new Promise(function () {
       setTimeout(function () {

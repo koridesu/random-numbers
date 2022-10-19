@@ -42,8 +42,8 @@ function RandomNumbers() {
     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
     const fontSize = Math.floor(Math.random() * 100) + 30;
-    const x = Math.floor(Math.random() * 1400) + 1;
-    const y = Math.floor(Math.random() * 1080) + 1;
+    const x = Math.floor(Math.random() * 2500) + 1;
+    const y = Math.floor(Math.random() * 1800) + 1;
     let cssStyle = {
       color: '#' + randomColor,
       fontSize: fontSize,
